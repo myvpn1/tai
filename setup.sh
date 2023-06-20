@@ -126,8 +126,8 @@ green "Permission Accepted!"
 else
 red "Permission Denied!
 Please Buy AutoScript Premium
-WA: 083117634078
-Telegram: t.me/Store_Arz"
+WA: 
+Telegram: "
 rm setup.sh > /dev/null 2>&1
 sleep 10
 exit 0
