@@ -1,0 +1,2 @@
+gak ada danjok
+menu
