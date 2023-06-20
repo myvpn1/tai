@@ -211,12 +211,21 @@ echo -e "     ${BICyan}[${BIGreen}4${BICyan}]${GREEN} TROJAN ${NC}"  "     ${BIC
 echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${GREEN} SHADOWSOCKS ${NC}" "${BICyan}[${BIGreen}10${BICyan}]${GREEN} INSTAL UDP ${NC}"       
 echo -e "     ${BICyan}[${BIGreen}x${BICyan}]${GREEN} EXIT ${NC}"  
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
+echo -e "${BICyan}                  MENU SETING${NC} "
+echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
+echo -e "     ${BICyan}[${BIWhite}11${BICyan}] ADD Host/Domain${NC} "   "    ${BICyan}[${BIWhite}16${BICyan}] Auto Reboot${NC} "
+echo -e "     ${BICyan}[${BIWhite}12${BICyan}] Renew CertXRAY${NC} "   "     ${BICyan}[${BIWhite}17${BICyan}] Reboot${NC} "
+echo -e "     ${BICyan}[${BIWhite}13${BICyan}] Change Banner SSH${NC} "   "  ${BICyan}[${BIWhite}18${BICyan}] Speedtest${NC} "
+echo -e "     ${BICyan}[${BIWhite}14${BICyan}] Info Bandwidth${NC} "   "     ${BICyan}[${BIWhite}19${BICyan}] Limit Speed${NC} "
+echo -e "     ${BICyan}[${BIWhite}15${BICyan}] Restart${NC} "   "            ${BICyan}[${BIWhite}20${BICyan}] Webmin${NC} "
+echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
+
 echo -e "${BICyan}                  MENU TAMBAHAN${NC} "
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "     ${BICyan}[${BIWhite}11${BICyan}] DOMAIN FREE${NC} "
-echo -e "     ${BICyan}[${BIWhite}12${BICyan}] UPDATE MENU${NC} "
-echo -e "     ${BICyan}[${BIWhite}13${BICyan}] GANTI NS DOMAIN${NC} "
-echo -e "     ${BICyan}[${BIWhite}14${BICyan}] CLEAR SAMPAH${NC} "
+echo -e "     ${BICyan}[${BIWhite}21${BICyan}] DOMAIN FREE${NC} "
+echo -e "     ${BICyan}[${BIWhite}22${BICyan}] UPDATE MENU${NC} "
+echo -e "     ${BICyan}[${BIWhite}23${BICyan}] GANTI NS DOMAIN${NC} "
+echo -e "     ${BICyan}[${BIWhite}24${BICyan}] CLEAR SAMPAH${NC} "
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 DATE=$(date +'%d %B %Y')
 datediff() {
@@ -249,10 +258,20 @@ case $opt in
 8) clear ; info ;;
 9) clear ; infoserv ;;
 10) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
-11) clear ; cf ;;
-12) clear ; up ;;
-13) clear ; slow ;;
-14) clear ; clearcache ;;
+11) clear ; addhost ;;
+12) clear ; certxray ;;
+13) clear ; nano /etc/issue.net ;;
+14) clear ; cek-bandwidth ;;
+15) clear ; restart ;;
+16) clear ; autoreboot ;;
+17) clear ; reboot ;;
+18) clear ; speedtest ;;
+19) clear ; limitspeed ;;
+20) clear ; webmin ;;
+21) clear ; cf ;;
+22) clear ; up ;;
+23) clear ; slow ;;
+24) clear ; clearcache ;;
 99) clear ; update ;;
 0) clear ; menu ;;
 x) exit ;;
