@@ -1,5 +1,5 @@
 #wget https://github.com/${GitUser}/
-GitUser="wingsofhope123"
+GitUser="myvpn1"
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
 		exit 1
@@ -10,7 +10,7 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 fi
 echo ""
 version=$(cat /home/ver)
-ver=$( curl https://raw.githubusercontent.com/${GitUser}/agoez09/main/version )
+ver=$( curl https://raw.githubusercontent.com/${GitUser}/tai/main/version )
 clear
 # LINE COLOUR
 line=$(cat /etc/line)
@@ -55,7 +55,7 @@ read -p "PPlease Choose 1 or x : " option2
 case $option2 in
 1)
 version=$(cat /home/ver)
-new_version=$( curl https://raw.githubusercontent.com/${GitUser}/agoez09/main/newversion | grep $version )
+new_version=$( curl https://raw.githubusercontent.com/${GitUser}/tai/main/newversion | grep $version )
 if [ $version = $new_version ]; then
 clear
 echo ""
@@ -83,7 +83,7 @@ sleep 1
 echo ""
 # UPDATE RUN-UPDATE
 cd /usr/bin
-wget -O run-update "https://raw.githubusercontent.com/${GitUser}/agoez09/main/options/update.sh"
+wget -O run-update "https://raw.githubusercontent.com/${GitUser}/tai/main/options/update.sh"
 chmod +x run-update
 # RUN UPDATE
 echo ""
@@ -95,35 +95,35 @@ echo ""
 echo -e "\e[0;32mNew Version Downloading started!\e[0m"
 sleep 2
 cd /usr/bin
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/usernew.sh"
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/add-ws.sh"
-wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/add-ssws.sh"
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/add-vless.sh"
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/add-tr.sh"
-wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/autoreboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/restart.sh"
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/tendang.sh"
-wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/running.sh"
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/myvpn1/tai/main/usernew.sh"
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/myvpn1/tai/main/add-ws.sh"
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/myvpn1/tai/main/add-ssws.sh"
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/myvpn1/tai/main/add-vless.sh"
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/myvpn1/tai/main/add-tr.sh"
+wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/myvpn1/tai/main/options/autoreboot.sh"
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/myvpn1/tai/main/options/restart.sh"
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/myvpn1/tai/main/options/tendang.sh"
+wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/myvpn1/tai/main/options/clearlog.sh"
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/myvpn1/tai/main/options/running.sh"
 #wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/arzvpn/Arzv/main/options/cek-trafik.sh"
-wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/tools/speedtest_cli.py"
-wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/cek-bandwidth.sh"
-wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/limitspeed.sh"
-wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-vless.sh"
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-vmess.sh"
-wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-ss.sh"
-wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-trojan.sh"
-wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-ssh.sh"
-wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-backup.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu.sh"
-wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/webmin.sh"
-wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/xp.sh"
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/update.sh"
-wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/addhost.sh"
-wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/crt.sh"
-wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-set.sh"
-wget -q -O /usr/bin/info "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/info.sh"
-wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/infoserv.sh"
+wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/myvpn1/tai/main/tools/speedtest_cli.py"
+wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/myvpn1/tai/main/options/cek-bandwidth.sh"
+wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/myvpn1/tai/main/options/limitspeed.sh"
+wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-vless.sh"
+wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-vmess.sh"
+wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-ss.sh"
+wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-trojan.sh"
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-ssh.sh"
+wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-backup.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu.sh"
+wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/myvpn1/tai/main/options/webmin.sh"
+wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/myvpn1/tai/main/xp.sh"
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/myvpn1/tai/main/options/update.sh"
+wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/myvpn1/tai/main/menu/addhost.sh"
+wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/myvpn1/tai/main/menu/crt.sh"
+wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-set.sh"
+wget -q -O /usr/bin/info "https://raw.githubusercontent.com/myvpn1/tai/main/options/info.sh"
+wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/myvpn1/tai/main/options/infoserv.sh"
 chmod +x /usr/bin/usernew
 chmod +x /usr/bin/add-ws
 chmod +x /usr/bin/add-ssws
@@ -156,7 +156,7 @@ clear
 echo -e ""
 echo -e "\e[0;32mDownloaded successfully!\e[0m"
 echo ""
-ver=$( curl https://raw.githubusercontent.com/${GitUser}/agoez09/main/version )
+ver=$( curl https://raw.githubusercontent.com/${GitUser}/tai/main/version )
 sleep 1
 echo -e "\e[0;32mPatching New Update, Please Wait...\e[0m"
 echo ""
