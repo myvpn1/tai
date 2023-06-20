@@ -169,7 +169,7 @@ echo -e "     ${BICyan}[${BIGreen}1${BICyan}]${GREEN} SSH ${NC}"  "       ${BICy
 echo -e "     ${BICyan}[${BIGreen}2${BICyan}]${GREEN} VMESS ${NC}"  "     ${BICyan}[${BIGreen}7${BICyan}]${GREEN} SETTINGS ${NC}" 
 echo -e "     ${BICyan}[${BIGreen}3${BICyan}]${GREEN} VLESS ${NC}"  "     ${BICyan}[${BIGreen}8${BICyan}]${GREEN} INFO SCRIPT ${NC}" 
 echo -e "     ${BICyan}[${BIGreen}4${BICyan}]${GREEN} TROJAN ${NC}"  "    ${BICyan}[${BIGreen}9${BICyan}]${GREEN} INFO SERVER ${NC}"
-echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${GREEN} SHADOWSOCKS ${NC}""${BICyan}[${BIGreen}10${BICyan}]${GREEN} INSTAL UDP ${NC}"       
+echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${GREEN} SHADOWSOCKS ${NC}" "${BICyan}[${BIGreen}10${BICyan}]${GREEN} INSTAL UDP ${NC}"       
 echo -e "     ${BICyan}[${BIGreen}x${BICyan}]${GREEN} EXIT ${NC}"  "      ${BICyan}[${BIGreen}11${BICyan}]${GREEN} GANTI NS DOMAIN ${NC}"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 DATE=$(date +'%d %B %Y')
