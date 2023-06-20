@@ -271,7 +271,7 @@ case $opt in
 21) clear ; cf ;;
 22) clear ; up ;;
 23) clear ; slow ;;
-24) clear ; clearcache ;;
+24) clear ; clearlog ;;
 99) clear ; update ;;
 0) clear ; menu ;;
 x) exit ;;
