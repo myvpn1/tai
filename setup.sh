@@ -428,7 +428,6 @@ wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/myvpn1/tai/main/xp.sh"
 wget -q -O /usr/bin/update "https://raw.githubusercontent.com/myvpn1/tai/main/options/update.sh"
 wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/myvpn1/tai/main/menu/addhost.sh"
 wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/myvpn1/tai/main/menu/crt.sh"
-wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-set.sh"
 wget -q -O /usr/bin/info "https://raw.githubusercontent.com/myvpn1/tai/main/options/info.sh"
 wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/myvpn1/tai/main/options/infoserv.sh"
 chmod +x /usr/bin/usernew
@@ -456,7 +455,6 @@ chmod +x /usr/bin/xp
 chmod +x /usr/bin/update
 chmod +x /usr/bin/addhost
 chmod +x /usr/bin/certxray
-chmod +x /usr/bin/menu-set
 chmod +x /usr/bin/info
 chmod +x /usr/bin/infoserv
 chmod +x /usr/bin/up
