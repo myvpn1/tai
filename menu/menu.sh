@@ -21,6 +21,23 @@ ICyan='\033[0;96m'        # Cyan
 IWhite='\033[0;97m'       # White
 NC='\e[0m'
 
+###########- END COLOR CODE -##########
+tram=$( free -h | awk 'NR==2 {print $2}' )
+uram=$( free -h | awk 'NR==2 {print $3}' )
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+# Getting CPU Information
+cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
+cpu_usage="$((${cpu_usage1/\.*} / ${corediilik:-1}))"
+cpu_usage+=" %"
+# TOTAL RAM
+total_ram=` grep "MemTotal: " /proc/meminfo | awk '{ print $2}'`
+totalram=$(($total_ram/1024))
+
+persenmemori="$(echo "scale=2; $usmem*100/$tomem" | bc)"
+#persencpu=
+persencpu="$(echo "scale=2; $cpu1+$cpu2" | bc)"
+
 # // Export Color & Information
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
@@ -159,7 +176,10 @@ echo -e " ${BICyan}│  ${BICyan}OS VPS          :  "`hostnamectl | grep "Operat
 echo -e " ${BICyan}│  ${BICyan}Current Domain  :  ${BIBlue}$(cat /etc/xray/domain)${NC}"
 echo -e " ${BICyan}│  ${BICyan}SLOWDNS Domain  :  ${BIBlue}$(cat /root/nsdomain)${NC}"
 echo -e " ${BICyan}│  ${BICyan}IP-VPS          :  ${BIBlue}$IPVPS${NC}"
-echo -e " ${BICyan}│  ${BICyan}ISP-VPS         :  ${BIBlue}$ISPVPS${NC}"
+echo -e " ${BICyan}│  ${BICyan}Jumlah Ram      :  ${BIBlue${totalram}MB${NC}"
+echo -e " ${BICyan}│  ${BICyan}Server Resource :  ${BIBlue}$uram / $tram${NC}"
+echo -e " ${BICyan}│  ${BICyan}CPU Usage       :  ${BIBlue}$cpu_usage${NC}"
+echo -e " ${BICyan}│  ${BICyan}License Limit   :  ${BIBlue}( 082131861788 )${NC}"
 echo -e " ${BICyan}│  ${BICyan}DATE&TIME       :  $( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
