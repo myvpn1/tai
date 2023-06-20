@@ -209,7 +209,14 @@ echo -e "     ${BICyan}[${BIGreen}2${BICyan}]${GREEN} VMESS ${NC}"  "      ${BIC
 echo -e "     ${BICyan}[${BIGreen}3${BICyan}]${GREEN} VLESS ${NC}"  "      ${BICyan}[${BIGreen}8${BICyan}]${GREEN} INFO SCRIPT ${NC}" 
 echo -e "     ${BICyan}[${BIGreen}4${BICyan}]${GREEN} TROJAN ${NC}"  "     ${BICyan}[${BIGreen}9${BICyan}]${GREEN} INFO SERVER ${NC}"
 echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${GREEN} SHADOWSOCKS ${NC}" "${BICyan}[${BIGreen}10${BICyan}]${GREEN} INSTAL UDP ${NC}"       
-echo -e "     ${BICyan}[${BIGreen}x${BICyan}]${GREEN} EXIT ${NC}"  "       ${BICyan}[${BIGreen}11${BICyan}]${GREEN} GANTI NS DOMAIN ${NC}"
+echo -e "     ${BICyan}[${BIGreen}x${BICyan}]${GREEN} EXIT ${NC}"  
+echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
+echo -e "${BICyan}                  MENU TAMBAHAN${NC} "
+echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
+echo -e "     ${BICyan}[${BIWhite}11${BICyan}] DOMAIN FREE${NC} "
+echo -e "     ${BICyan}[${BIWhite}12${BICyan}] UPDATE MENU${NC} "
+echo -e "     ${BICyan}[${BIWhite}13${BICyan}] GANTI NS DOMAIN${NC} "
+echo -e "     ${BICyan}[${BIWhite}14${BICyan}] CLEAR SAMPAH${NC} "
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 DATE=$(date +'%d %B %Y')
 datediff() {
