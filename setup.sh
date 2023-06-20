@@ -359,34 +359,34 @@ else
     exit 1
 fi
 
-#install arzsource
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m           >>> Install Source <<<          \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
+#install projek
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install projek               $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 1 
 wget -q https://raw.githubusercontent.com/myvpn1/tai/main/tools/andysource.sh && chmod +x andysource.sh && ./andysource.sh
-#install ssh-vpn
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m          >>> Install SSH / WS <<<        \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
+#install ssh ovpn
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install SSH / WS               $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 1
 wget -q https://raw.githubusercontent.com/myvpn1/tai/main/tools/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
-#install ins-xray
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m            >>> Install Xray <<<         \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
+#Instal Xray
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green          Install XRAY              $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 1 
 wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-#install backup
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m            >>> Install Backup <<<           \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
+#pasang rc clone ssh ovpn
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Memasang backup server              $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 1 
 wget -q https://raw.githubusercontent.com/myvpn1/tai/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-#install ins-xray
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m            >>> Install slowdns <<<           \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
+#Instal slowdns
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green          Install SLDNS              $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 1 
 wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 
@@ -511,42 +511,47 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo  ""
-echo  "------------------------------------------------------------"
-echo  ""
-echo  "   >>> Service & Port"  | tee -a log-install.txt
-echo  "   - OpenSSH                 : 22"  | tee -a log-install.txt
-echo  "   - SSH Websocket           : 80" | tee -a log-install.txt
-echo  "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
-echo  "   - Stunnel5                : 447, 777" | tee -a log-install.txt
-echo  "   - Dropbear                : 109, 143" | tee -a log-install.txt
-echo  "   - Badvpn                  : 7100-7300" | tee -a log-install.txt
-echo  "   - Nginx                   : 81" | tee -a log-install.txt
-echo  "   - XRAY  Vmess TLS         : 443" | tee -a log-install.txt
-echo  "   - XRAY  Vmess None TLS    : 80" | tee -a log-install.txt
-echo  "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
-echo  "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
-echo  "   - Trojan GRPC             : 443" | tee -a log-install.txt
-echo  "   - Trojan WS               : 443" | tee -a log-install.txt
-echo  "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
-echo  ""  | tee -a log-install.txt
-echo  "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo  "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
-echo  "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
-echo  "   - Dflate                  : [ON]"  | tee -a log-install.txt
-echo  "   - IPtables                : [ON]"  | tee -a log-install.txt
-echo  "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
-#echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
-echo  "   - Autoreboot              : 00.00 GMT +7" | tee -a log-install.txt
-#echo "   - Autobackup Data" | tee -a log-install.txt
-echo  "   - AutoKill Multi Login User" | tee -a log-install.txt
-echo  "   - Auto Delete Expired Account" | tee -a log-install.txt
-echo  "   - Fully automatic script" | tee -a log-install.txt
-echo  "   - VPS settings" | tee -a log-install.txt
-echo  "   - Restore Data" | tee -a log-install.txt
-echo  "   - Full Orders For Various Services" | tee -a log-install.txt
+echo "=====================-[ SCRIPT ANDY YUDA ]-===================="
 echo ""
-echo  ""
-echo  "------------------------------------------------------------"
+echo "------------------------------------------------------------"
+echo ""
+echo ""
+echo "   >>> Service & Port"  | tee -a log-install.txt
+echo "   - OpenSSH		: 22"  | tee -a log-install.txt
+echo "   - SSH Websocket	: 80 [ON]" | tee -a log-install.txt
+echo "   - SSH SSL Websocket	: 443" | tee -a log-install.txt
+echo "   - Stunnel4		: 447, 777" | tee -a log-install.txt
+echo "   - Dropbear		: 109, 143" | tee -a log-install.txt
+echo "   - Badvpn		: 7100-7900" | tee -a log-install.txt
+echo "   - Nginx		: 81" | tee -a log-install.txt
+echo "   - Vmess TLS		: 443" | tee -a log-install.txt
+echo "   - Vmess None TLS	: 80" | tee -a log-install.txt
+echo "   - Vless TLS		: 443" | tee -a log-install.txt
+echo "   - Vless None TLS	: 80" | tee -a log-install.txt
+echo "   - Trojan GRPC		: 443" | tee -a log-install.txt
+echo "   - Trojan WS		: 443" | tee -a log-install.txt
+echo "   - Trojan Go		: 443" | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
+echo "   - Timezone		: Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
+echo "   - Fail2Ban		: [ON]"  | tee -a log-install.txt
+echo "   - Dflate		: [ON]"  | tee -a log-install.txt
+echo "   - IPtables		: [ON]"  | tee -a log-install.txt
+echo "   - Auto-Reboot		: [ON]"  | tee -a log-install.txt
+echo "   - IPv6			: [OFF]"  | tee -a log-install.txt
+echo "   - Autoreboot On	: $aureb:00 $gg GMT +7" | tee -a log-install.txt
+echo "   - AutoKill Multi Login User" | tee -a log-install.txt
+echo "   - Auto Delete Expired Account" | tee -a log-install.txt
+echo "   - Fully automatic script" | tee -a log-install.txt
+echo "   - VPS settings" | tee -a log-install.txt
+echo "   - Admin Control" | tee -a log-install.txt
+echo "   - Change port" | tee -a log-install.txt
+echo "   - Full Orders For Various Services" | tee -a log-install.txt
+echo ""
+echo ""
+echo "------------------------------------------------------------"
+echo ""
+echo "===============-[ Script Created By Andy Yuda ]-==============="
 echo -e ""
 echo  ""
 echo  "" | tee -a log-install.txt
