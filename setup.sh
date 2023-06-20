@@ -376,10 +376,10 @@ echo -e "┌──────────────────────�
 echo -e " \E[41;1;39m            >>> Install Xray <<<         \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1 
-wget -q https://raw.githubusercontent.com/myvpn1/tai/main/tools/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-#install ins-xray
+wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+#install backup
 echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m            >>> Install BR <<<           \E[0m$NC"
+echo -e " \E[41;1;39m            >>> Install Backup <<<           \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1 
 wget -q https://raw.githubusercontent.com/myvpn1/tai/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
@@ -392,63 +392,7 @@ wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript
 
 # // Download Data
 echo -e "${GREEN}Download Data${NC}"
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/myvpn1/tai/main/usernew.sh"
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/myvpn1/tai/main/add-ws.sh"
-wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/myvpn1/tai/main/add-ssws.sh"
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/myvpn1/tai/main/add-vless.sh"
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/myvpn1/tai/main/add-tr.sh"
-wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/myvpn1/tai/main/options/autoreboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/myvpn1/tai/main/options/restart.sh"
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/myvpn1/tai/main/options/tendang.sh"
-wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/myvpn1/tai/main/options/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/myvpn1/tai/main/options/running.sh"
-#wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/myvpn1/tai/main/options/cek-trafik.sh"
-wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/myvpn1/tai/main/tools/speedtest_cli.py"
-wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/myvpn1/tai/main/options/cek-bandwidth.sh"
-wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/myvpn1/tai/main/options/limitspeed.sh"
-wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-vless.sh"
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-vmess.sh"
-wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-ss.sh"
-wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-trojan.sh"
-wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-ssh.sh"
-wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-backup.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu.sh"
-wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/myvpn1/tai/main/options/webmin.sh"
-wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/myvpn1/tai/main/xp.sh"
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/myvpn1/tai/main/options/update.sh"
-wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/myvpn1/tai/main/menu/addhost.sh"
-wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/myvpn1/tai/main/menu/crt.sh"
-wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-set.sh"
-wget -q -O /usr/bin/info "https://raw.githubusercontent.com/myvpn1/tai/main/options/info.sh"
-wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/myvpn1/tai/main/options/infoserv.sh"
-chmod +x /usr/bin/usernew
-chmod +x /usr/bin/add-ws
-chmod +x /usr/bin/add-ssws
-chmod +x /usr/bin/add-vless
-chmod +x /usr/bin/add-tr
-chmod +x /usr/bin/autoreboot
-chmod +x /usr/bin/restart
-chmod +x /usr/bin/tendang
-chmod +x /usr/bin/clearlog
-chmod +x /usr/bin/running
-chmod +x /usr/bin/speedtest
-chmod +x /usr/bin/cek-bandwidth
-chmod +x /usr/bin/limitspeed
-chmod +x /usr/bin/menu-vless
-chmod +x /usr/bin/menu-vmess
-chmod +x /usr/bin/menu-ss
-chmod +x /usr/bin/menu-trojan
-chmod +x /usr/bin/menu-ssh
-chmod +x /usr/bin/menu-backup
-chmod +x /usr/bin/menu
-chmod +x /usr/bin/webmin
-chmod +x /usr/bin/xp
-chmod +x /usr/bin/update
-chmod +x /usr/bin/addhost
-chmod +x /usr/bin/certxray
-chmod +x /usr/bin/menu-set
-chmod +x /usr/bin/info
-chmod +x /usr/bin/infoserv
+wget -q -O senmenu.sh https://raw.githubusercontent.com/AndyyudaVPN/xray-ws/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 
 #cat > /etc/cron.d/re_otm <<-END
 #SHELL=/bin/sh
@@ -510,43 +454,49 @@ else
 gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
-echo  ""
-echo  "------------------------------------------------------------"
-echo  ""
-echo  "   >>> Service & Port"  | tee -a log-install.txt
-echo  "   - OpenSSH                 : 22"  | tee -a log-install.txt
-echo  "   - SSH Websocket           : 80" | tee -a log-install.txt
-echo  "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
-echo  "   - Stunnel5                : 447, 777" | tee -a log-install.txt
-echo  "   - Dropbear                : 109, 143" | tee -a log-install.txt
-echo  "   - Badvpn                  : 7100-7300" | tee -a log-install.txt
-echo  "   - Nginx                   : 81" | tee -a log-install.txt
-echo  "   - XRAY  Vmess TLS         : 443" | tee -a log-install.txt
-echo  "   - XRAY  Vmess None TLS    : 80" | tee -a log-install.txt
-echo  "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
-echo  "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
-echo  "   - Trojan GRPC             : 443" | tee -a log-install.txt
-echo  "   - Trojan WS               : 443" | tee -a log-install.txt
-echo  "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
-echo  ""  | tee -a log-install.txt
-echo  "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo  "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
-echo  "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
-echo  "   - Dflate                  : [ON]"  | tee -a log-install.txt
-echo  "   - IPtables                : [ON]"  | tee -a log-install.txt
-echo  "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
-#echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
-echo  "   - Autoreboot              : 00.00 GMT +7" | tee -a log-install.txt
-#echo "   - Autobackup Data" | tee -a log-install.txt
-echo  "   - AutoKill Multi Login User" | tee -a log-install.txt
-echo  "   - Auto Delete Expired Account" | tee -a log-install.txt
-echo  "   - Fully automatic script" | tee -a log-install.txt
-echo  "   - VPS settings" | tee -a log-install.txt
-echo  "   - Restore Data" | tee -a log-install.txt
-echo  "   - Full Orders For Various Services" | tee -a log-install.txt
+echo "===============-[ SCRIPT VPN PREMIUM ]-================"
 echo ""
-echo  ""
-echo  "------------------------------------------------------------"
+echo "------------------------------------------------------------"
+echo ""
+echo "   >>> Service & Port"  | tee -a log-install.txt
+echo "   - OpenSSH                 : 22, 53, 2222, 2269"  | tee -a log-install.txt
+echo "   - SSH Websocket           : 80,8880,8080" | tee -a log-install.txt
+echo "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
+echo "   - Stunnel5                : 222, 777" | tee -a log-install.txt
+echo "   - Dropbear                : 109, 143" | tee -a log-install.txt
+echo "   - Badvpn                  : 7100-7300" | tee -a log-install.txt
+echo "   - Nginx                   : 81" | tee -a log-install.txt
+echo "   - XRAY  Vmess TLS         : 443" | tee -a log-install.txt
+echo "   - XRAY  Vmess None TLS    : 80" | tee -a log-install.txt
+echo "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
+echo "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
+echo "   - Trojan GRPC             : 443" | tee -a log-install.txt
+echo "   - Trojan WS               : 443" | tee -a log-install.txt
+echo "   - Trojan GO               : 443" | tee -a log-install.txt
+echo "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
+echo "   - slowdns                 : 443,80,8080,53,5300" | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
+echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
+echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
+echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
+echo "   - IPtables                : [ON]"  | tee -a log-install.txt
+echo "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
+echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
+echo "   - Autobackup Data" | tee -a log-install.txt
+echo "   - AutoKill Multi Login User" | tee -a log-install.txt
+echo "   - Auto Delete Expired Account" | tee -a log-install.txt
+echo "   - Fully automatic script" | tee -a log-install.txt
+echo "   - VPS settings" | tee -a log-install.txt
+echo "   - Admin Control" | tee -a log-install.txt
+echo "   - Change port" | tee -a log-install.txt
+echo "   - Restore Data" | tee -a log-install.txt
+echo "   - Full Orders For Various Services" | tee -a log-install.txt
+echo ""
+echo ""
+echo "------------------------------------------------------------"
+echo ""
+echo "===============-[ Script Credit By AndyYuda ]-==============="
 echo -e ""
 echo  ""
 echo  "" | tee -a log-install.txt
