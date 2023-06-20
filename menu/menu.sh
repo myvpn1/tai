@@ -249,6 +249,10 @@ case $opt in
 8) clear ; info ;;
 9) clear ; infoserv ;;
 10) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
+11) clear ; cf ;;
+12) clear ; up ;;
+13) clear ; slow ;;
+14) clear ; clearcache ;;
 99) clear ; update ;;
 0) clear ; menu ;;
 x) exit ;;
