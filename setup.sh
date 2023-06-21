@@ -383,12 +383,6 @@ echo -e " \E[41;1;39m            >>> Install BR <<<           \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1 
 wget -q https://raw.githubusercontent.com/myvpn1/tai/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-#install slowdns
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m            >>> Install slowdns <<<           \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
-sleep 1 
-wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 
 # // Download Data
 echo -e "${GREEN}Download Data${NC}"
