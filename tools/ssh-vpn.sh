@@ -117,10 +117,10 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=Andy
-organizationalunit=AndyVpnStore
-commonname=AndyVpn
-email=andyyudak1997@gmail.com
+organization=Arz
+organizationalunit=ArzVpnStore
+commonname=ArzVpn
+email=admin@arzvip.site
 
 # simple password minimal
 wget -q -O /etc/pam.d/common-password "https://raw.githubusercontent.com/myvpn1/tai/main/tools/password"
