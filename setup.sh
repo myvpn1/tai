@@ -46,7 +46,7 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/myvpn1/izin/main/tai > /root/tmp
+    curl -sS https://raw.githubusercontent.com/wingsofhope123/permission/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -62,9 +62,9 @@ BURIQ () {
     done
     rm -f  /root/tmp
 }
-# https://raw.githubusercontent.com/myvpn1/izin/main/tai 
+# https://raw.githubusercontent.com/wingsofhope123/permission/main/ip 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/myvpn1/izin/main/tai | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/wingsofhope123/permission/main/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -81,7 +81,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/myvpn1/izin/main/tai | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/wingsofhope123/permission/main/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -109,7 +109,7 @@ echo "$localip $(hostname)" >> /etc/hosts
 fi
 mkdir -p /etc/xray
 
-echo -e "${tyblue} Welcome To kontol......${NC} "
+echo -e "${tyblue} Welcome To Arz AutoScript......${NC} "
 sleep 2
 echo -e "[ ${green}INFO${NC} ] Preparing the install file"
 apt install git curl -y >/dev/null 2>&1
@@ -126,8 +126,8 @@ green "Permission Accepted!"
 else
 red "Permission Denied!
 Please Buy AutoScript Premium
-WA: 
-Telegram: "
+WA: 083117634078
+Telegram: t.me/Store_Arz"
 rm setup.sh > /dev/null 2>&1
 sleep 10
 exit 0
@@ -226,10 +226,10 @@ mkdir -p /usr/local/etc/xray
 
 # // String / Request Data
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-DOMAIN=klmpk.my.id
-SUB_DOMAIN=${sub}.klmpk.my.id
-CF_ID=andyyuda41@gmail.com
-CF_KEY=0d626234700bad388d6d07b49c42901445d1c
+DOMAIN=scarzvpn.live
+SUB_DOMAIN=${sub}.scarzvpn.live
+CF_ID=arzstore22@gmail.com
+CF_KEY=8772ff286d8515ccb36caf0f0f69b2fde1831
 set -euo pipefail
 IP=$(curl -sS ifconfig.me);
 echo "Updating DNS for ${SUB_DOMAIN}..."
@@ -359,71 +359,68 @@ else
     exit 1
 fi
 
-#install projek
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install projek               $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+#install arzsource
+echo -e "┌─────────────────────────────────────────┐"
+echo -e " \E[41;1;39m           >>> Install Source <<<          \E[0m$NC"
+echo -e "└─────────────────────────────────────────┘"
 sleep 1 
-wget -q https://raw.githubusercontent.com/myvpn1/tai/main/tools/andysource.sh && chmod +x andysource.sh && ./andysource.sh
-#install ssh ovpn
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install SSH / WS               $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+wget -q https://raw.githubusercontent.com/wingsofhope123/agoez09/main/tools/arzsource.sh && chmod +x arzsource.sh && ./arzsource.sh
+#install ssh-vpn
+echo -e "┌─────────────────────────────────────────┐"
+echo -e " \E[41;1;39m          >>> Install SSH / WS <<<        \E[0m$NC"
+echo -e "└─────────────────────────────────────────┘"
 sleep 1
-wget -q https://raw.githubusercontent.com/myvpn1/tai/main/tools/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
-#Instal Xray
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install XRAY              $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+wget -q https://raw.githubusercontent.com/wingsofhope123/agoez09/main/tools/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+#install ins-xray
+echo -e "┌─────────────────────────────────────────┐"
+echo -e " \E[41;1;39m            >>> Install Xray <<<         \E[0m$NC"
+echo -e "└─────────────────────────────────────────┘"
 sleep 1 
-wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-#pasang rc clone ssh ovpn
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Memasang backup server              $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+wget -q https://raw.githubusercontent.com/wingsofhope123/agoez09/main/tools/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+#install ins-xray
+echo -e "┌─────────────────────────────────────────┐"
+echo -e " \E[41;1;39m            >>> Install BR <<<           \E[0m$NC"
+echo -e "└─────────────────────────────────────────┘"
 sleep 1 
-wget -q https://raw.githubusercontent.com/myvpn1/tai/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-#Instal slowdns
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install SLDNS              $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+wget -q https://raw.githubusercontent.com/wingsofhope123/agoez09/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+#install ins-xray
+echo -e "┌─────────────────────────────────────────┐"
+echo -e " \E[41;1;39m            >>> Install slowdns <<<           \E[0m$NC"
+echo -e "└─────────────────────────────────────────┘"
 sleep 1 
 wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 
 # // Download Data
 echo -e "${GREEN}Download Data${NC}"
-wget -q -O /usr/bin/up "https://raw.githubusercontent.com/myvpn1/tai/main/up.sh"
-wget -q -O /usr/bin/slow "https://raw.githubusercontent.com/myvpn1/tai/main/slow.sh"
-wget -q -O /usr/bin/up "https://raw.githubusercontent.com/Andyyuda/v4/main/menu/clearcache.sh"
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/myvpn1/tai/main/usernew.sh"
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/myvpn1/tai/main/add-ws.sh"
-wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/myvpn1/tai/main/add-ssws.sh"
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/myvpn1/tai/main/add-vless.sh"
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/myvpn1/tai/main/add-tr.sh"
-wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/myvpn1/tai/main/options/autoreboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/myvpn1/tai/main/options/restart.sh"
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/myvpn1/tai/main/options/tendang.sh"
-wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/myvpn1/tai/main/options/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/myvpn1/tai/main/options/running.sh"
-wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/myvpn1/tai/main/tools/speedtest_cli.py"
-wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/myvpn1/tai/main/options/cek-bandwidth.sh"
-wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/myvpn1/tai/main/options/limitspeed.sh"
-wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-vless.sh"
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-vmess.sh"
-wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-ss.sh"
-wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-trojan.sh"
-wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-ssh.sh"
-wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu-backup.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/myvpn1/tai/main/menu/menu.sh"
-wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/myvpn1/tai/main/options/webmin.sh"
-wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/myvpn1/tai/main/xp.sh"
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/myvpn1/tai/main/options/update.sh"
-wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/myvpn1/tai/main/menu/addhost.sh"
-wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/myvpn1/tai/main/menu/crt.sh"
-wget -q -O /usr/bin/info "https://raw.githubusercontent.com/myvpn1/tai/main/options/info.sh"
-wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/myvpn1/tai/main/options/infoserv.sh"
-chmod +x /usr/bin/up
-chmod +x /usr/bin/slow
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/usernew.sh"
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/add-ws.sh"
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/add-ssws.sh"
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/add-vless.sh"
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/add-tr.sh"
+wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/autoreboot.sh"
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/restart.sh"
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/tendang.sh"
+wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/clearlog.sh"
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/running.sh"
+#wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/arzvpn/Arzv/main/options/cek-trafik.sh"
+wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/tools/speedtest_cli.py"
+wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/cek-bandwidth.sh"
+wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/limitspeed.sh"
+wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-vless.sh"
+wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-vmess.sh"
+wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-ss.sh"
+wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-trojan.sh"
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-ssh.sh"
+wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-backup.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu.sh"
+wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/webmin.sh"
+wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/xp.sh"
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/update.sh"
+wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/addhost.sh"
+wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/crt.sh"
+wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-set.sh"
+wget -q -O /usr/bin/info "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/info.sh"
+wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/infoserv.sh"
 chmod +x /usr/bin/usernew
 chmod +x /usr/bin/add-ws
 chmod +x /usr/bin/add-ssws
@@ -449,6 +446,7 @@ chmod +x /usr/bin/xp
 chmod +x /usr/bin/update
 chmod +x /usr/bin/addhost
 chmod +x /usr/bin/certxray
+chmod +x /usr/bin/menu-set
 chmod +x /usr/bin/info
 chmod +x /usr/bin/infoserv
 
@@ -501,7 +499,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/myvpn1/tai/main/version  )
+serverV=$( curl -sS https://raw.githubusercontent.com/wingsofhope123/agoez09/main/version  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
