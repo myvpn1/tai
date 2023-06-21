@@ -453,11 +453,9 @@ chmod +x /usr/bin/xp
 chmod +x /usr/bin/update
 chmod +x /usr/bin/addhost
 chmod +x /usr/bin/certxray
+chmod +x /usr/bin/menu-set
 chmod +x /usr/bin/info
 chmod +x /usr/bin/infoserv
-chmod +x /usr/bin/up
-chmod +x /usr/bin/cf
-chmod +x /usr/bin/slow
 
 #cat > /etc/cron.d/re_otm <<-END
 #SHELL=/bin/sh
@@ -561,7 +559,7 @@ echo  ""
 echo  "" | tee -a log-install.txt
 rm -fr /root/limit
 rm -fr /root/weleh.sh 
-rm -fr /root/andysource.sh 
+rm -fr /root/arzsource.sh 
 rm -fr /root/ssh-vpn.sh
 rm -fr /root/ins-xray.sh
 rm -fr /root/setup.sh
