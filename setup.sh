@@ -393,7 +393,6 @@ wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript
 # // Download Data
 echo -e "${GREEN}Download Data${NC}"
 wget -q -O /usr/bin/up "https://raw.githubusercontent.com/myvpn1/tai/main/up.sh"
-wget -q -O /usr/bin/cf "https://raw.githubusercontent.com/Andyyuda/ver3/main/cf.sh"
 wget -q -O /usr/bin/slow "https://raw.githubusercontent.com/myvpn1/tai/main/slow.sh"
 wget -q -O /usr/bin/up "https://raw.githubusercontent.com/Andyyuda/v4/main/menu/clearcache.sh"
 wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/myvpn1/tai/main/usernew.sh"
@@ -423,6 +422,8 @@ wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/myvpn1/tai/main/m
 wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/myvpn1/tai/main/menu/crt.sh"
 wget -q -O /usr/bin/info "https://raw.githubusercontent.com/myvpn1/tai/main/options/info.sh"
 wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/myvpn1/tai/main/options/infoserv.sh"
+chmod +x /usr/bin/up
+chmod +x /usr/bin/slow
 chmod +x /usr/bin/usernew
 chmod +x /usr/bin/add-ws
 chmod +x /usr/bin/add-ssws
@@ -448,7 +449,6 @@ chmod +x /usr/bin/xp
 chmod +x /usr/bin/update
 chmod +x /usr/bin/addhost
 chmod +x /usr/bin/certxray
-chmod +x /usr/bin/menu-set
 chmod +x /usr/bin/info
 chmod +x /usr/bin/infoserv
 
